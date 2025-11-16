@@ -1,4 +1,5 @@
 import icons from "@/constants/icons";
+import { useRouter } from "expo-router";
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
@@ -90,6 +91,22 @@ interface Props {
 }
 
 const Card = ({ item, onPress }: Props) => {
+  const router = useRouter();
+  const handleBuy = () => {
+    router.push({
+      pathname: "/drink/order",
+      params: {
+        id: String(item.id),
+        name: item.name,
+        description: item.description,
+        type: item.type,
+        price: String(item.price),
+        rating: String(item.rating),
+        image: item.image,
+      },
+    });
+  };
+
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -113,9 +130,9 @@ const Card = ({ item, onPress }: Props) => {
         <Text className="text-base font-sora-light text-grey">{item.type}</Text>
         <View className="flex flex-row items-center justify-between mt-1">
           <Text className="text-base font-sora-bold text-black">
-            ${item.price}
+            ${item.price.toFixed(2)}
           </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handleBuy}>
             <Image source={icons.addButton} />
           </TouchableOpacity>
         </View>

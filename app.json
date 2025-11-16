@@ -4,7 +4,7 @@
     "slug": "alx-coffee-shop-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/background-home.png",
+    "icon": "./assets/images/coffeeLogo.png",
     "scheme": "alxcoffeeshopapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -24,14 +24,14 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/background-home.png"
+      "favicon": "./assets/images/coffeeLogo.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/coffeeLogo.png",
           "resizeMode": "cover",
           "backgroundColor": "#ffffff",
           "enableFullScreenImage_legacy": true,

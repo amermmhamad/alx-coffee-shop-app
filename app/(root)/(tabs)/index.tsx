@@ -51,7 +51,7 @@ const coffees: Coffee[] = [
     description:
       "An Americano is an espresso-based coffee drink made by adding hot water to a shot or two of espresso, which dilutes the intense flavor of the espresso to be more like a standard cup of coffee.",
     type: "Americano",
-    price: 3.53,
+    price: 3.2,
     rating: 4.3,
     image: require("@/assets/images/3.png"),
   },
@@ -61,7 +61,7 @@ const coffees: Coffee[] = [
     description:
       "A cappuccino is an Italian coffee drink with a balanced ratio of espresso, steamed milk, and a thick layer of milk foam on top. It has a creamy, smooth texture and a bold but mildly sweet flavor from the combination of rich espresso and steamed milk.",
     type: "Machiato",
-    price: 3.53,
+    price: 4.0,
     rating: 5.0,
     image: require("@/assets/images/4.png"),
   },
@@ -120,7 +120,7 @@ export default function Index() {
   };
 
   return (
-    <View className="flex-1 bg-[#f2eded]">
+    <View className="flex-1 bg-[#f9f9f9]">
       <FlatList
         data={filteredCoffees}
         renderItem={({ item }) => (
